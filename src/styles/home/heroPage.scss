@@ -1,0 +1,43 @@
+.hero-page {
+  padding: 200px 0;
+  background: url("../../src/images/bg.png") no-repeat center;
+  background-size: cover;
+
+  @media (max-width: 475px) {
+    padding: 150px 0 90px 0;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    max-width: 780px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    margin-bottom: 80px;
+    max-width: 600px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    &__heading {
+      margin-bottom: 10px;
+      font-family: LatoBold;
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 30px;
+
+    @media (max-width: 475px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}

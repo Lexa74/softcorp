@@ -1,0 +1,60 @@
+header {
+  background: rgba(16, 16, 29, 0.9);
+  padding: 32px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+
+  .logo {
+    @media (max-width: 768px) {
+      width: 190px;
+    }
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__link {
+      margin: 0 30px;
+      font-size: 13px;
+      line-height: 16px;
+      font-family: LatoSemiBold;
+      color: white;
+      text-transform: uppercase;
+      position: relative;
+
+      @media (max-width: 768px) {
+        margin: 0 10px;
+        font-size: 12px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        background: white;
+        transition: .3s all;
+        width: 0;
+        bottom: -5px;
+        left: 50%;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+          left: 0;
+        }
+      }
+
+      &.active {
+        color: #43ABF0;
+      }
+    }
+  }
+}

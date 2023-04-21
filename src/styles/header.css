@@ -1,0 +1,25 @@
+header {
+  background: rgba(16, 16, 29, 0.9);
+  padding: 32px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header-container__link {
+  margin: 0 30px;
+  font-size: 13px;
+  line-height: 16px;
+  font-family: LatoSemiBold;
+  color: white;
+  text-transform: uppercase;
+}
+header .header-container__link.active {
+  color: #43ABF0;
+}
+
+/*# sourceMappingURL=header.css.map */

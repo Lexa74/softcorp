@@ -1,0 +1,23 @@
+.hero-page {
+  padding: 200px 0;
+  background: url("../../images/bg.png") no-repeat center;
+}
+.hero-page__title {
+  margin-bottom: 80px;
+  max-width: 780px;
+}
+.hero-page__description {
+  font-size: 20px;
+  margin-bottom: 80px;
+  max-width: 600px;
+}
+.hero-page__description__heading {
+  margin-bottom: 10px;
+  font-family: LatoBold;
+}
+.hero-page__buttons {
+  display: flex;
+  gap: 30px;
+}
+
+/*# sourceMappingURL=heroPage.css.map */
