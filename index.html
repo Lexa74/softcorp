@@ -9,17 +9,25 @@
     <link rel="stylesheet" href="src/styles/main.css">
 </head>
 <body>
+<div class="layout"></div>
     <header>
         <div class="wrapper header-container">
             <a href="#" class="logo">
                 <img src="./src/images/logo.svg" alt="">
             </a>
-            <nav>
+            <nav class="navigation-menu">
                 <a class="header-container__link active" href="#">Бизнес</a>
                 <a class="header-container__link" href="#">О нас</a>
                 <a class="header-container__link" href="#">Цены</a>
                 <a class="header-container__link" href="#">Оформить заказ</a>
             </nav>
+            <div class="burger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none">
+                    <rect class="line_top" width="24" height="3" rx="1.5"/>
+                    <rect class="line_middle" x="6" y="7" width="18" height="3" rx="1.5"/>
+                    <rect class="line_bottom" y="14" width="24" height="3" rx="1.5"/>
+                </svg>
+            </div>
         </div>
     </header>
     <section class="hero-page">

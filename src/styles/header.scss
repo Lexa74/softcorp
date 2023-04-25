@@ -5,6 +5,26 @@ header {
   width: 100%;
   z-index: 3;
 
+  &.active {
+    .navigation-menu {
+      right: 0;
+    }
+    .burger {
+      rect {
+        fill: #000;
+      }
+      .line_top {
+        transform: translate(8px, -1px) rotate(45deg);
+      }
+      .line_middle {
+        opacity: 0;
+      }
+      .line_bottom {
+        transform: translate(35px, 11px) rotate(135deg);
+      }
+    }
+  }
+
   .logo {
     @media (max-width: 768px) {
       width: 190px;
@@ -25,13 +45,18 @@ header {
       text-transform: uppercase;
       position: relative;
 
-      @media (max-width: 768px) {
+
+      @media (max-width: 768px) and (min-width: 475px) {
         margin: 0 10px;
         font-size: 12px;
 
         &:last-child {
           margin-right: 0;
         }
+      }
+      @media (max-width: 475px) {
+        color: black;
+        margin: 15px 0;
       }
 
       &:after {
@@ -43,6 +68,10 @@ header {
         width: 0;
         bottom: -5px;
         left: 50%;
+
+        @media (max-width: 475px) {
+          background: black;
+        }
       }
 
       &:hover {
@@ -55,6 +84,35 @@ header {
       &.active {
         color: #43ABF0;
       }
+    }
+  }
+  .navigation-menu {
+    display: flex;
+    transition: .3s all;
+
+    @media (max-width: 475px) {
+      position: fixed;
+      flex-direction: column;
+      top: 0;
+      width: 320px;
+      height: 100vh;
+      right: -400px;
+      padding: 70px 10px;
+      text-align: center;
+      background: white;
+    }
+  }
+  .burger {
+    display: none;
+    z-index: 9999;
+
+    @media (max-width: 475px) {
+      display: block;
+    }
+    rect {
+      transition: .3s all;
+      opacity: 1;
+      fill: #fff;
     }
   }
 }

@@ -97,7 +97,7 @@ h1 {
 @media (max-width: 475px) {
   h1 {
     font-size: 23px;
-    line-height: 38px;
+    line-height: 30px;
   }
 }
 
@@ -147,6 +147,19 @@ ul.list li:after {
   .wrapper {
     padding: 0 20px;
   }
+}
+
+.layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+.layout.active {
+  z-index: 3;
 }
 
 .btn {
@@ -203,6 +216,21 @@ header {
   width: 100%;
   z-index: 3;
 }
+header.active .navigation-menu {
+  right: 0;
+}
+header.active .burger rect {
+  fill: #000;
+}
+header.active .burger .line_top {
+  transform: translate(8px, -1px) rotate(45deg);
+}
+header.active .burger .line_middle {
+  opacity: 0;
+}
+header.active .burger .line_bottom {
+  transform: translate(35px, 11px) rotate(135deg);
+}
 @media (max-width: 768px) {
   header .logo {
     width: 190px;
@@ -222,13 +250,19 @@ header .header-container__link {
   text-transform: uppercase;
   position: relative;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 475px) {
   header .header-container__link {
     margin: 0 10px;
     font-size: 12px;
   }
   header .header-container__link:last-child {
     margin-right: 0;
+  }
+}
+@media (max-width: 475px) {
+  header .header-container__link {
+    color: black;
+    margin: 15px 0;
   }
 }
 header .header-container__link:after {
@@ -241,12 +275,48 @@ header .header-container__link:after {
   bottom: -5px;
   left: 50%;
 }
+@media (max-width: 475px) {
+  header .header-container__link:after {
+    background: black;
+  }
+}
 header .header-container__link:hover:after {
   width: 100%;
   left: 0;
 }
 header .header-container__link.active {
   color: #43ABF0;
+}
+header .navigation-menu {
+  display: flex;
+  transition: 0.3s all;
+}
+@media (max-width: 475px) {
+  header .navigation-menu {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    width: 320px;
+    height: 100vh;
+    right: -400px;
+    padding: 70px 10px;
+    text-align: center;
+    background: white;
+  }
+}
+header .burger {
+  display: none;
+  z-index: 9999;
+}
+@media (max-width: 475px) {
+  header .burger {
+    display: block;
+  }
+}
+header .burger rect {
+  transition: 0.3s all;
+  opacity: 1;
+  fill: #fff;
 }
 
 .hero-page {
