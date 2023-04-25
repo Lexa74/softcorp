@@ -1,4 +1,7 @@
-(() => {
+import './styles/main.scss'
+// import './fonts/fonts.scss'
+
+document.addEventListener("DOMContentLoaded", () => {
     const select = document.querySelector('.select');
     const resultSelect = document.querySelector('.select__result');
     const resultRange = document.querySelector('.range-result');
@@ -37,7 +40,7 @@
     })
 
     layout.addEventListener('click', () => {
-        removeActive({ header, layout })
+        removeActive([ header, layout ])
     })
-})
-()
+});
+
