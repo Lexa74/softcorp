@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Winners</title>
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+<div class="layout"> </div>
+
+<div class="modal-wrapper">
+    <div class="layout-modal close-modal">
+
+    </div>
+    <div class="modal-window">
+        <form class="feedback-form">
+            <p class="modal-window__title">Заказать звонок</p>
+            <label>Номер телефона: </label>
+            <input class="modal-window__fields" type="tel" id="phone-number" placeholder="+7 (___) ___-__-__" data-phone-pattern = "+7 (___) ___-__-__" data-phone-clear = "false">
+
+            <label>Имя: </label>
+            <input class="modal-window__fields" type="text" id="first-name" placeholder="Введите ваше имя">
+
+            <label>Сообщение: </label>
+            <textarea class="modal-window__fields" id="message" placeholder="Введите сообщение"></textarea>
+
+            <button type="submit" class="btn blue">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<header>
+    <div class="wrapper header-container">
+        <a href="/softcorp/index.html" class="logo">
+            <img src="./src/images/logo.svg" alt="">
+        </a>
+        <nav class="navigation-menu">
+            <a class="header-container__link" href="/softcorp/index.html">Главная</a>
+            <a class="header-container__link active" href="/softcorp/winners.html">Winners</a>
+            <a class="header-container__link" href="#">Цены</a>
+            <a class="header-container__link" href="#">Оформить заказ</a>
+        </nav>
+        <div class="burger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" fill="none">
+                <rect class="line_top" width="24" height="3" rx="1.5"/>
+                <rect class="line_middle" x="6" y="7" width="18" height="3" rx="1.5"/>
+                <rect class="line_bottom" y="14" width="24" height="3" rx="1.5"/>
+            </svg>
+        </div>
+    </div>
+</header>
+
+<section class="winners">
+    <div class="winners__container">
+        <h1 class="title">Победители</h1>
+        <div class="tabs">
+            <div class="tab-labels">
+                <div class="tab-labels__label">
+                    Первая неделя
+                </div>
+                <div class="tab-labels__label">
+                    Вторая неделя
+                </div>
+                <div class="tab-labels__label">
+                    Третья неделя
+                </div>
+                <div class="tab-labels__label">
+                    Четвертая неделя
+                </div>
+                <div class="tab-labels__label">
+                    Пятая неделя
+                </div>
+            </div>
+            <div class="tab-elems">
+                <div class="tab-elems__elem">
+                    <div class="email-winners"></div>
+                    <div class="prize">Prize</div>
+                </div>
+                <div class="tab-elems__elem">
+                    <div class="email-winners"></div>
+                    <div class="prize">Prize</div>
+                </div>
+                <div class="tab-elems__elem">
+                    <div class="email-winners"></div>
+                    <div class="prize">Prize</div>
+                </div>
+                <div class="tab-elems__elem">
+                    <div class="email-winners"></div>
+                    <div class="prize">Prize</div>
+                </div>
+                <div class="tab-elems__elem">
+                    <div class="email-winners"></div>
+                    <div class="prize">Prize</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+<footer>
+    <div class="wrapper footer">
+        <div class="footer__copyright">
+            <span>© 2018 «LOREMIPSUM.NET» Все права защищены.</span>
+        </div>
+        <div class="footer__banks">
+            <div class="wrapper-image"><img src="./src/images/bank1.svg" alt=""></div>
+            <div class="wrapper-image"><img src="./src/images/bank2.svg" alt=""></div>
+            <div class="wrapper-image"><img src="./src/images/bank3.svg" alt=""></div>
+        </div>
+        <div class="footer__social">
+            <a href="#" class="footer__social__email">
+                <div class="wrapper-image">
+                    <img src="./src/images/mail.svg" alt="">
+                </div>
+                <span>info@ipsum228.com</span>
+            </a>
+            <a href="#" class="footer__social__vk">
+                <div class="wrapper-image">
+                    <img src="./src/images/vk.svg" alt="">
+                </div>
+                <span>Мы вконтакте</span>
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+<script type="module" src="./src/scripts/winners.js"></script>
+
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+</html>

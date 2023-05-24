@@ -157,9 +157,11 @@ ul.list li:after {
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   z-index: -1;
+  display: none;
 }
 .layout.active {
   z-index: 3;
+  display: block;
 }
 
 .btn {
@@ -747,6 +749,38 @@ header .burger rect {
   .order__form__submit {
     width: 100%;
   }
+}
+
+.winners {
+  padding: 200px 0;
+}
+.winners .tabs {
+  height: 500px;
+  transition: 0.3s all;
+  overflow: hidden;
+}
+.winners .tabs.hide {
+  height: 0;
+}
+.winners .tabs .tab-labels {
+  display: flex;
+}
+.winners .tabs .tab-labels__label {
+  padding: 10px 20px;
+  background: #6F6D7B;
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+}
+.winners .tabs .tab-labels__label.active {
+  background: #3E9CDC;
+}
+.winners .tabs .tab-elems__elem {
+  display: none;
+  padding: 10px;
+}
+.winners .tabs .tab-elems__elem.active {
+  display: block;
 }
 
 .modal-wrapper {

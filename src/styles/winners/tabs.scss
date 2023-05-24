@@ -1,0 +1,38 @@
+.winners {
+  padding: 200px 0;
+
+  .tabs {
+    height: 500px;
+    transition: .3s all;
+    overflow: hidden;
+
+    &.hide {
+      height: 0;
+    }
+    .tab-labels {
+      display: flex;
+      &__label {
+        padding: 10px 20px;
+        background: #6F6D7B;
+        color: white;
+        cursor: pointer;
+        border: 1px solid white;
+
+        &.active {
+          background: #3E9CDC;
+        }
+      }
+    }
+
+    .tab-elems {
+      &__elem {
+        display: none;
+        padding: 10px;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}
