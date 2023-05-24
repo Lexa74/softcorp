@@ -9,7 +9,29 @@
     <link rel="stylesheet" href="src/styles/main.css">
 </head>
 <body>
-<div class="layout"></div>
+<div class="layout"> </div>
+
+<div class="modal-wrapper">
+    <div class="layout-modal close-modal">
+
+    </div>
+    <div class="modal-window">
+        <form class="feedback-form">
+            <p class="modal-window__title">Заказать звонок</p>
+            <label>Номер телефона: </label>
+            <input class="modal-window__fields" type="tel" id="phone-number" placeholder="+7 (___) ___-__-__" data-phone-pattern = "+7 (___) ___-__-__" data-phone-clear = "false">
+
+            <label>Имя: </label>
+            <input class="modal-window__fields" type="text" id="first-name" placeholder="Введите ваше имя">
+
+            <label>Сообщение: </label>
+            <textarea class="modal-window__fields" id="message" placeholder="Введите сообщение"></textarea>
+
+            <button type="submit" class="btn blue">Отправить</button>
+        </form>
+    </div>
+</div>
+
     <header>
         <div class="wrapper header-container">
             <a href="#" class="logo">
@@ -46,7 +68,7 @@
                 </ul>
             </div>
             <div class="hero-page__buttons">
-                <a href="#" class="btn blue">заказать</a>
+                <a href="#" class="btn blue open-modal">заказать</a>
                 <a href="#" class="btn white">подробнее</a>
             </div>
         </div>
@@ -194,4 +216,5 @@
     </footer>
 </body>
 <script src="./src/scripts/script.js"></script>
+<script src="./src/scripts/modalWindow.js"></script>
 </html>
