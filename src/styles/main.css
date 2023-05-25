@@ -74,28 +74,28 @@ img {
   height: auto;
 }
 
-h1, h2 {
+h1, h2, .h1, .h2 {
   font-family: LatoBold;
   text-transform: uppercase;
 }
 
-h1 {
+h1, .h1 {
   font-size: 48px;
   line-height: 58px;
 }
 @media (max-width: 1024px) {
-  h1 {
+  h1, .h1 {
     font-size: 44px;
   }
 }
 @media (max-width: 768px) {
-  h1 {
+  h1, .h1 {
     font-size: 32px;
     line-height: 48px;
   }
 }
 @media (max-width: 475px) {
-  h1 {
+  h1, .h1 {
     font-size: 23px;
     line-height: 30px;
   }
@@ -751,19 +751,39 @@ header .burger rect {
   }
 }
 
-.winners {
-  padding: 200px 0;
-}
 .winners .tabs {
-  height: 500px;
+  background-repeat: repeat;
+  padding: 100px 0;
+}
+.winners .tabs .wrapper-tabs {
   transition: 0.3s all;
   overflow: hidden;
 }
-.winners .tabs.hide {
-  height: 0;
+.winners .tabs .h1 {
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 3px solid #b3b3b6;
+  margin-bottom: 20px;
+}
+.winners .tabs .h1.hide:after {
+  transform: rotate(180deg);
+}
+.winners .tabs .h1:after {
+  content: "";
+  background: url(../../src/images/arr-select.svg);
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 10px;
+  background-size: 100%;
+  transform: rotate(0);
+  transition: 0.3s all;
 }
 .winners .tabs .tab-labels {
   display: flex;
+  justify-content: center;
 }
 .winners .tabs .tab-labels__label {
   padding: 10px 20px;
@@ -772,6 +792,7 @@ header .burger rect {
   cursor: pointer;
   border: 1px solid white;
   transition: 0.3s all;
+  text-align: center;
 }
 .winners .tabs .tab-labels__label.active {
   background: #3E9CDC;
@@ -779,17 +800,47 @@ header .burger rect {
 .winners .tabs .tab-elems__elem {
   height: 0;
   opacity: 0;
-  transition: opacity 0.3s, width 0.3s, padding 0s;
-  width: 50%;
-}
-.winners .tabs .tab-elems__elem .tab-row {
-  display: flex;
+  transition: opacity 0.3s, width 0.3s, transform 0.3s;
+  transform: translateX(200px);
 }
 .winners .tabs .tab-elems__elem.active {
   height: auto;
   opacity: 1;
   width: 100%;
-  padding: 10px;
+  transform: translateX(0);
+}
+.winners .tabs .tabs-titles {
+  font-weight: bold;
+}
+.winners .tabs .tab-row, .winners .tabs .tabs-titles {
+  display: flex;
+  border-bottom: 1px solid #6F6D7B;
+}
+.winners .tabs .tab-row .email-winners, .winners .tabs .tab-row .prize, .winners .tabs .tab-row .tabs-titles__title, .winners .tabs .tabs-titles .email-winners, .winners .tabs .tabs-titles .prize, .winners .tabs .tabs-titles .tabs-titles__title {
+  width: 50%;
+  padding: 20px 10px;
+}
+@media (max-width: 991px) {
+  .winners .tabs.bg-image .tabs-titles, .winners .tabs.bg-image .tab-elems {
+    color: white;
+    background-image: url(../../src/images/pattern2.png);
+  }
+}
+@media (max-width: 767px) {
+  .winners .tabs.bg-image .tabs-titles, .winners .tabs.bg-image .tab-elems {
+    background-image: url(../../src/images/pattern3.png);
+  }
+}
+@media (max-width: 991px) {
+  .winners .tabs .tabs-titles, .winners .tabs .tab-elems {
+    background-color: #dfdfdf;
+  }
+}
+@media (max-width: 767px) {
+  .winners .tabs .tabs-titles, .winners .tabs .tab-elems {
+    color: white;
+    background-color: rgba(16, 16, 29, 0.9);
+  }
 }
 
 .modal-wrapper {

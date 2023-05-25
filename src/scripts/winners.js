@@ -3,24 +3,21 @@ import {getAllPosts} from "./utils/api.js";
 import {createStructureOfTabs} from "./engineWinners/creators.js";
 
 (async () => {
-    const labels = ['Первая неделя', 'Вторая неделя', 'Третья неделя', 'Четвертая неделя', 'Пятая неделя'];
-    createStructureOfTabs(labels)
+    const labels = ['Первая неделя', 'Вторая неделя', 'Третья неделя', 'Четвертая неделя', 'Пятая неделя', 'Шестая неделя'];
+    const titlesColumn = ['E-mail', 'Приз']
+    const heading = 'Победители';
+
+    createStructureOfTabs(heading, labels, titlesColumn);
 
     const tabLabels = document.querySelectorAll('.tab-labels__label');
     const tabElems = document.querySelectorAll('.tab-elems__elem');
-    const tabs = document.querySelector('.tabs');
-    const hideTabs = document.querySelector('.winners .title');
-
-    // const getDivWithClass = (className) => {
-    //     const childrenDiv = document.createElement("div")
-    //     childrenDiv.classList.add(className)
-    // }
-
-    const clearDomElems = (domElems) => {
-        domElems.forEach((domElem) => {
-            domElem.innerHTML = ''
-        })
-    }
+    const tabs = document.querySelector('.wrapper-tabs');
+    const hideTabs = document.querySelector('.tabs .h1');
+    let heightWrapperTabs;
+    setTimeout(() => {
+        heightWrapperTabs = tabs.offsetHeight
+        tabs.style.height = `${heightWrapperTabs}px`;
+    },1000)
 
     const dataOutput = (parentBlock, innerClass, data) => {
         const childrenDiv = document.createElement("div")
@@ -30,32 +27,47 @@ import {createStructureOfTabs} from "./engineWinners/creators.js";
     }
 
     const innerDataFromApiInDom = (data, element) => {
-        const prize = element.getElementsByClassName('prize');
-        const email = element.getElementsByClassName('email-winners');
-        clearDomElems([prize[0], email[0]]);
-
-        data.map(responseData => {
-            dataOutput(prize[0], 'inner-prize', responseData.body)
-            dataOutput(email[0], 'inner-email', responseData.title)
+        element.innerHTML = ''
+        data.map((resData, index) => {
+            const newDiv = document.createElement('div')
+            newDiv.classList.add('tab-row')
+            element.appendChild(newDiv)
+            const elementForInner = element.getElementsByClassName('tab-row')
+            dataOutput(elementForInner[index], 'email-winners', resData.title)
+            dataOutput(elementForInner[index], 'prize', resData.body)
         })
     }
 
     tabLabels.forEach((label,index) => {
         label.addEventListener('click', async () => {
+            const postsFromData = await getAllPosts(index + 1);
             removeClassActive(tabLabels)
             removeClassActive(tabElems)
             addClassActiveElems([tabElems[index], tabLabels[index]])
-            await innerDataFromApiInDom(await getAllPosts(index + 1), tabElems[index])
+            await innerDataFromApiInDom(postsFromData, tabElems[index])
         })
     })
 
-    hideTabs.addEventListener('click', () => {
+    hideTabs.addEventListener('click', (event) => {
         tabs.classList.toggle('hide')
+        event.target.classList.toggle('hide')
+        // console.log(heightWrapperTabs)
+        if(!tabs.classList.contains('hide')) {
+            tabs.style.height = `${heightWrapperTabs}px`;
+        } else {
+            tabs.style.height = `0px`
+        }
     })
 
-    //Заполнение при загрузки страницы
+
+
+    //Действия при загрузке страницы
 
     addClassActiveElems([tabElems[0], tabLabels[0]]);
     await innerDataFromApiInDom(await getAllPosts(1), tabElems[0])
+
+    const wrapperTabs = document.querySelector('.tab-elems__elem.active');
+    // console.log(hideTabs.offsetHeight)
+    // console.log(heightWrapperTabs)
 
 })()

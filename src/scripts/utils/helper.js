@@ -10,12 +10,12 @@ export const addClassActiveElems = (elems) => {
     })
 }
 
-export const createContainers = (parentClassName, childrenClassname, count, innerData = '') => {
+export const createContainers = (parentClassName, childrenClassname, count, innerData = ['']) => {
     const parentDiv = document.querySelector(parentClassName);
     for (let i = 0; i < count; i++) {
         const container = document.createElement("div");
         container.classList.add(childrenClassname);
-        container.innerHTML = innerData;
+        container.innerHTML = innerData[i];
         parentDiv.appendChild(container);
     }
 }
