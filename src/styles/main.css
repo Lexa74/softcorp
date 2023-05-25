@@ -771,16 +771,25 @@ header .burger rect {
   color: white;
   cursor: pointer;
   border: 1px solid white;
+  transition: 0.3s all;
 }
 .winners .tabs .tab-labels__label.active {
   background: #3E9CDC;
 }
 .winners .tabs .tab-elems__elem {
-  display: none;
-  padding: 10px;
+  height: 0;
+  opacity: 0;
+  transition: opacity 0.3s, width 0.3s, padding 0s;
+  width: 50%;
+}
+.winners .tabs .tab-elems__elem .tab-row {
+  display: flex;
 }
 .winners .tabs .tab-elems__elem.active {
-  display: block;
+  height: auto;
+  opacity: 1;
+  width: 100%;
+  padding: 10px;
 }
 
 .modal-wrapper {

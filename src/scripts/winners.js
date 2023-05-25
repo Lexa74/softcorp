@@ -1,15 +1,20 @@
 import {addClassActiveElems, removeClassActive} from "./utils/helper.js";
 import {getAllPosts} from "./utils/api.js";
+import {createStructureOfTabs} from "./engineWinners/creators.js";
 
 (async () => {
+    const labels = ['Первая неделя', 'Вторая неделя', 'Третья неделя', 'Четвертая неделя', 'Пятая неделя'];
+    createStructureOfTabs(labels)
+
     const tabLabels = document.querySelectorAll('.tab-labels__label');
     const tabElems = document.querySelectorAll('.tab-elems__elem');
     const tabs = document.querySelector('.tabs');
     const hideTabs = document.querySelector('.winners .title');
 
-    hideTabs.addEventListener('click', () => {
-        tabs.classList.toggle('hide')
-    })
+    // const getDivWithClass = (className) => {
+    //     const childrenDiv = document.createElement("div")
+    //     childrenDiv.classList.add(className)
+    // }
 
     const clearDomElems = (domElems) => {
         domElems.forEach((domElem) => {
@@ -20,8 +25,8 @@ import {getAllPosts} from "./utils/api.js";
     const dataOutput = (parentBlock, innerClass, data) => {
         const childrenDiv = document.createElement("div")
         childrenDiv.classList.add(innerClass)
-        childrenDiv.innerHTML = `${data}`
         parentBlock.appendChild(childrenDiv)
+        childrenDiv.innerHTML = `${data}`
     }
 
     const innerDataFromApiInDom = (data, element) => {
@@ -31,7 +36,7 @@ import {getAllPosts} from "./utils/api.js";
 
         data.map(responseData => {
             dataOutput(prize[0], 'inner-prize', responseData.body)
-            dataOutput(email[0], 'inner-prize', responseData.title)
+            dataOutput(email[0], 'inner-email', responseData.title)
         })
     }
 
@@ -42,6 +47,10 @@ import {getAllPosts} from "./utils/api.js";
             addClassActiveElems([tabElems[index], tabLabels[index]])
             await innerDataFromApiInDom(await getAllPosts(index + 1), tabElems[index])
         })
+    })
+
+    hideTabs.addEventListener('click', () => {
+        tabs.classList.toggle('hide')
     })
 
     //Заполнение при загрузки страницы

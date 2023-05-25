@@ -17,6 +17,7 @@
         color: white;
         cursor: pointer;
         border: 1px solid white;
+        transition: .3s all;
 
         &.active {
           background: #3E9CDC;
@@ -26,11 +27,20 @@
 
     .tab-elems {
       &__elem {
-        display: none;
-        padding: 10px;
+        height: 0;
+        opacity: 0;
+        transition: opacity .3s, width .3s, padding 0s;
+        width: 50%;
+
+        .tab-row {
+          display: flex;
+        }
 
         &.active {
-          display: block;
+          height: auto;
+          opacity: 1;
+          width: 100%;
+          padding: 10px;
         }
       }
     }
