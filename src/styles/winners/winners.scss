@@ -1,0 +1,143 @@
+.tabs {
+  background-repeat: repeat;
+  padding: 100px 0;
+
+  .wrapper-tabs {
+    transition: .5s all;
+    overflow: hidden;
+    max-height: 3000px;
+    &.hide {
+      max-height: 0;
+    }
+  }
+
+  .tab-row, .tabs-titles {
+    display: flex;
+    border-bottom: 1px solid #6F6D7B;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  .row-container, .tabs-titles__title {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .row-container {
+    &__mobile-title {
+      width: 30%;
+      display: none;
+
+      @media (max-width: 767px) {
+        display: block;
+      }
+    }
+    &__content {
+      width: 70%;
+    }
+
+    @media (max-width: 767px) {
+      display: flex;
+    }
+  }
+
+  .h1 {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 3px solid #b3b3b6;
+    margin-bottom: 20px;
+    justify-content: center;
+
+    &.hide {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:after {
+      content: "";
+      background: url(../../src/images/arr-select.svg);
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 10px;
+      background-size: 100%;
+      transform: rotate(0);
+      transition: .3s all;
+    }
+  }
+
+  .tab-labels {
+    display: flex;
+    justify-content: center;
+    &__label {
+      padding: 10px 20px;
+      background: #6F6D7B;
+      color: white;
+      cursor: pointer;
+      border: 1px solid white;
+      transition: .3s all;
+      text-align: center;
+
+      &.active {
+        background: #3E9CDC;
+      }
+
+      @media (max-width: 768px) {
+        padding: 10px;
+      }
+    }
+  }
+
+  .tab-elems {
+    &__elem {
+      height: 0;
+      opacity: 0;
+      transition: opacity .3s, width .3s, transform .3s;
+      transform: translateX(200px);
+
+      &.active {
+        height: auto;
+        opacity: 1;
+        width: 100%;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .tabs-titles {
+    font-weight: bold;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &.bg-image {
+    .tabs-titles, .tab-elems {
+      @media (max-width: 991px) {
+        color: white;
+        background-image: url(../../src/images/pattern2.png);
+      }
+      @media (max-width: 767px) {
+        background-image: url(../../src/images/pattern3.png);
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .tabs-titles, .tab-elems {
+      background-color: #dfdfdf;
+    }
+  }
+  @media (max-width: 767px) {
+    .tabs-titles, .tab-elems {
+      color: white;
+      background-color: rgba(16, 16, 29, 0.9);
+    }
+  }
+}

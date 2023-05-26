@@ -79,12 +79,12 @@ img {
   height: auto;
 }
 
-h1, h2 {
+h1, h2, .h1, .h2 {
   font-family: LatoBold;
   text-transform: uppercase;
 }
 
-h1 {
+h1, .h1 {
   font-size: 48px;
   line-height: 58px;
 
@@ -156,9 +156,11 @@ ul {
   width: 100%;
   background: rgba(0, 0, 0, .8);
   z-index: -1;
+  display: none;
 
   &.active {
     z-index: 3;
+    display: block;
   }
 }
 
