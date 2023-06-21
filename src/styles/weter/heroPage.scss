@@ -1,7 +1,47 @@
 .hero-page {
-  background: url("/softcorp/src/images/bg-gradient.png");
-  background-size: cover;
   width: 100%;
+}
+
+.hero-container {
+  margin-left: 600px;
+  padding-top: 120px;
+  max-width: 850px;
+
+  &__caption {
+    margin-bottom: 16px;
+  }
+  &__sub-caption {
+    font-size: 56px;
+    line-height: 64px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #CECFDB;
+  }
+  &__description {
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 140px;
+    font-family: InterBold;
+  }
+}
+
+.video-presentation-container {
+  display: flex;
+
+  &__icon {
+    margin-right: 24px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 48px;
+    line-height: 56px;
+    font-family: InterBold;
+  }
+  span {
+    font-size: 40px;
+  }
 }
 
 .bg-images {
@@ -31,5 +71,22 @@
     &.active {
       opacity: 1;
     }
+  }
+}
+
+.socials {
+  position: absolute;
+  top: 150px;
+  right: 72px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1900px) {
+    right: 20px;
+  }
+
+  &__icon {
+    margin-bottom: 40px;
+    width: 80px;
   }
 }
