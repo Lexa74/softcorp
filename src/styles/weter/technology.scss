@@ -30,6 +30,13 @@
     @media (max-width: 1900px) {
       left: 640px;
     }
+    @media (max-width: 1500px) {
+      left: 500px;
+    }
+    @media (max-width: 1366px) {
+      left: 460px;
+      top: 400px;
+    }
   }
 }
 
@@ -42,15 +49,27 @@
     font-size: 48px;
     line-height: 56px;
     font-family: InterSemiBold;
+
+    @media (max-width: 1500px) {
+      font-size: 32px;
+    }
   }
   &__image {
     &_small {
       width: 248px;
       margin-bottom: 46px;
+
+      @media (max-width: 1366px) {
+        width: 200px;
+      }
     }
     &_big {
       width: 426px;
       margin-bottom: 111px;
+
+      @media (max-width: 1366px) {
+        width: 336px;
+      }
     }
   }
 }
@@ -63,7 +82,8 @@
   &__section {
     display: flex;
     flex-direction: column;
-    max-width: 576px;
+    width: 576px;
+    text-align: center;
 
     img {
       width: 240px;
@@ -72,6 +92,10 @@
     span {
       font-size: 40px;
       line-height: 48px;
+
+      @media (max-width: 1366px) {
+        font-size: 24px;
+      }
     }
   }
 }

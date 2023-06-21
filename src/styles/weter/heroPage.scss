@@ -1,11 +1,16 @@
 .hero-page {
   width: 100%;
+  position: relative;
 }
 
 .hero-container {
   margin-left: 600px;
   padding-top: 120px;
   max-width: 850px;
+
+  @media (max-width: 1500px) {
+    margin-left: 0;
+  }
 
   &__caption {
     margin-bottom: 16px;
@@ -16,12 +21,20 @@
     padding-bottom: 40px;
     margin-bottom: 40px;
     border-bottom: 1px solid #CECFDB;
+
+    @media (max-width: 1366px) {
+      font-size: 36px;
+    }
   }
   &__description {
     font-size: 48px;
     line-height: 56px;
     margin-bottom: 140px;
     font-family: InterBold;
+
+    @media (max-width: 1366px) {
+      font-size: 32px;
+    }
   }
 }
 
@@ -38,9 +51,17 @@
     font-size: 48px;
     line-height: 56px;
     font-family: InterBold;
+
+    @media (max-width: 1366px) {
+      font-size: 32px;
+    }
   }
   span {
     font-size: 40px;
+
+    @media (max-width: 1366px) {
+      font-size: 24px;
+    }
   }
 }
 
@@ -71,22 +92,5 @@
     &.active {
       opacity: 1;
     }
-  }
-}
-
-.socials {
-  position: absolute;
-  top: 150px;
-  right: 72px;
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: 1900px) {
-    right: 20px;
-  }
-
-  &__icon {
-    margin-bottom: 40px;
-    width: 80px;
   }
 }
