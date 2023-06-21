@@ -54,3 +54,24 @@
     }
   }
 }
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    max-width: 576px;
+
+    img {
+      width: 240px;
+      margin: 0 auto 32px auto;
+    }
+    span {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+}
