@@ -31,7 +31,6 @@ body {
 
 h1, h2, .h1, .h2 {
   font-family: InterBold;
-  text-transform: uppercase;
 }
 
 h1, .h1 {
@@ -52,8 +51,9 @@ h1, .h1 {
 }
 
 h2 {
-  font-size: 36px;
-  line-height: 43px;
+  font-size: 88px;
+  line-height: 96px;
+  font-family: InterRegular;
 
   @media (max-width: 1024px) {
     font-size: 32px;
