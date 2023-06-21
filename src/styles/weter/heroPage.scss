@@ -1,0 +1,29 @@
+.bg-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  &__image {
+    opacity: 0;
+    transition: .5s all;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &:first-child {
+      background-image: url("/softcorp/src/images/bg-weter-1.png");
+    }
+    &:last-child {
+      background-image: url("/softcorp/src/images/bg-weter-2.png");
+    }
+    &.active {
+      opacity: 1;
+    }
+  }
+}

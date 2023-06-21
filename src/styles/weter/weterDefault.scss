@@ -22,14 +22,14 @@ input[type='text'], input[type='email'], input[type='password'], input[type='num
 }
 
 body {
-  font-family: LatoRegular;
+  font-family: InterRegular;
   color: #000000;
   font-size: 16px;
   line-height: 16px;
 }
 
 h1, h2, .h1, .h2 {
-  font-family: LatoBold;
+  font-family: InterBold;
   text-transform: uppercase;
 }
 
@@ -67,60 +67,13 @@ h2 {
 }
 
 .wrapper {
-  max-width: 1170px;
-  position: relative;
+  max-width: 1920px;
   margin: 0 auto;
+  width: 100%;
+  padding: 0 72px;
+  position: relative;
 
-  @media (max-width: 1170px) {
+  @media (max-width: 1900px) {
     padding: 0 20px;
   }
-}
-
-.btn {
-  text-align: center;
-  font-size: 13px;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  padding: 12px 31px;
-  border: 1px solid #FFFFFF;
-  border-radius: 4px;
-  width: 183px;
-  transition: .3s all;
-  cursor: pointer;
-
-  @media (max-width: 475px) {
-    width: 100%;
-  }
-
-  &.white {
-    color: #2A2B30;
-    border-color: #6F6D7B;
-    background: white;
-
-    &:hover {
-      background: #6F6D7B;
-      color: white;
-    }
-    &:active {
-      background: #535360;
-      color: white;
-    }
-  }
-  &.blue {
-    color: white;
-    border-color: white;
-    background: #3E9CDC;
-
-    &:hover {
-      background: #53b0f3;
-    }
-    &:active {
-      background: #1479b6;
-    }
-  }
-}
-
-.blue-color {
-  color: #3E9CDC;
 }
