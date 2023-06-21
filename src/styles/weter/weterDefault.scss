@@ -27,6 +27,10 @@ body {
   line-height: 48px;
   color: #CECFDB;
   background: black;
+
+  &.active {
+    overflow-y: hidden;
+  }
 }
 
 h1, h2, .h1, .h2 {
@@ -62,7 +66,7 @@ h2 {
     font-size: 70px;
   }
   @media (max-width: 1024px) {
-    font-size: 32px;
+    font-size: 55px;
   }
   @media (max-width: 768px) {
     font-size: 28px;
