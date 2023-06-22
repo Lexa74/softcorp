@@ -17,7 +17,7 @@ import {removeClassActive} from "../utils/helper.js";
         newsBlock.classList.toggle('active')
     })
 
-    let i = 0;
+    let i = 1;
     setInterval(() => {
         removeClassActive(images);
         images[i].classList.add('active')

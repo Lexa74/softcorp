@@ -4,42 +4,6 @@ header {
   left: 0;
   width: 100%;
   z-index: 2;
-
-  &.active {
-    .burger {
-      rect {
-        fill: #000;
-      }
-      .line_top {
-        transform: translate(8px, -1px) rotate(45deg);
-      }
-      .line_middle {
-        opacity: 0;
-      }
-      .line_bottom {
-        transform: translate(35px, 11px) rotate(135deg);
-      }
-    }
-    .wrapper-for-mobile {
-      right: -1px;
-    }
-  }
-
-  .burger {
-    display: none;
-    z-index: 9999;
-    top: 25px;
-    position: relative;
-
-    @media (max-width: 1280px) {
-      display: block;
-    }
-    rect {
-      transition: .3s all;
-      opacity: 1;
-      fill: #fff;
-    }
-  }
 }
 
 .header-container {
@@ -48,6 +12,7 @@ header {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
 }
 
 .navigation-menu {
@@ -56,7 +21,7 @@ header {
   padding-right: 94px;
   padding-top: 24px;
 
-  @media (max-width: 1280px) {
+  @media screen and (max-width: 1280px) {
     flex-direction: column;
     padding-right: 0;
     padding-top: 0;
@@ -66,7 +31,7 @@ header {
     padding: 0 20px;
     color: #CECFDB;
 
-    @media (max-width: 1280px) {
+    @media screen and (max-width: 1280px) {
       color: black;
     }
     &:last-child {
@@ -79,11 +44,11 @@ header {
   font-size: 40px;
   line-height: 48px;
 
-  @media (max-width: 1900px) {
+  @media screen and (max-width: 1900px) {
     font-size: 32px;
   }
 
-  @media (max-width: 1366px) {
+  @media screen and (max-width: 1366px) {
     font-size: 24px;
   }
 }
@@ -94,11 +59,15 @@ header {
   top: 24px;
   color: #CECFDB;
 
-  @media (max-width: 1900px) {
+  @media screen and (max-width: 1900px) {
     right: 20px;
   }
-  @media (max-width: 1280px) {
+  @media screen and (max-width: 1280px) {
     right: 80px;
+  }
+  @media screen and (max-width: 475px) {
+    top: -7px;
+    right: 10px;
   }
 }
 
@@ -112,8 +81,13 @@ header {
     padding: 14px 0 11px 24px;
     width: 217px;
 
-    @media (max-width: 1366px) {
-      padding: 14px 0 0 24px;
+    .logo {
+      display: block;
+    }
+
+    @media screen and (max-width: 475px) {
+      padding: 5px 0 5px 0;
+      width: 130px;
     }
   }
   &__news-mobile {
@@ -122,24 +96,29 @@ header {
     display: none;
     cursor: pointer;
 
-    @media (max-width: 1366px) {
+    @media screen and (max-width: 1366px) {
       font-size: 24px;
+    }
+    @media screen and (max-width: 475px) {
+      font-size: 16px;
     }
 
     &.active {
       .arrow-rotate {
         transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
       }
     }
 
     .arrow-rotate {
       transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
       display: inline-block;
       margin-left: 5px;
       transition: .3s all;
     }
 
-    @media (max-width: 1500px) {
+    @media screen and (max-width: 1500px) {
       display: block;
     }
   }
@@ -155,13 +134,20 @@ header {
   color: #CECFDB;
   z-index: 5;
 
-  @media (max-width: 1900px) {
+  @media screen and (max-width: 1900px) {
     left: 20px;
+  }
+  @media screen and (max-width: 475px) {
+    left: 10px;
   }
 }
 
 .wrapper-news {
   margin: 0 24px;
+
+  @media screen and (max-width: 475px) {
+    margin: 0 10px;
+  }
 }
 
 .news {
@@ -172,9 +158,12 @@ header {
   overflow: hidden;
   transition: .5s all;
 
-  @media (max-width: 1500px) {
+  @media screen and (max-width: 1500px) {
     max-height: 0;
     background: black;
+  }
+  @media screen and (max-width: 475px) {
+    width: 270px;
   }
 
   &.active {
@@ -188,6 +177,13 @@ header {
     top: 24px;
     left: 0;
     background: rgba(0, 0, 2, 0.16);
+
+    @media screen and (max-width: 475px) {
+      padding: 0 4px;
+      font-size: 18px;
+      line-height: 28px;
+      top: 10px;
+    }
   }
   &__heading {
     font-size: 48px;
@@ -195,8 +191,13 @@ header {
     font-family: InterBold;
     padding: 24px 0 132px 0;
 
-    @media (max-width: 1366px) {
+    @media screen and (max-width: 1366px) {
       font-size: 32px;
+    }
+    @media screen and (max-width: 475px) {
+      font-size: 24px;
+      line-height: 34px;
+      padding: 5px 0 132px 0;
     }
   }
   .news-actions {
@@ -206,7 +207,7 @@ header {
     border-bottom: 1px solid #CECFDB;
     padding-bottom: 24px;
 
-    @media (max-width: 1366px) {
+    @media screen and (max-width: 1366px) {
       padding-bottom: 4px;
     }
 
@@ -214,8 +215,11 @@ header {
       display: flex;
       font-size: 40px;
 
-      @media (max-width: 1366px) {
+      @media screen and (max-width: 1366px) {
         font-size: 24px;
+      }
+      @media screen and (max-width: 475px) {
+        font-size: 14px;
       }
 
       span {
@@ -227,8 +231,11 @@ header {
       line-height: 56px;
       font-family: InterBold;
 
-      @media (max-width: 1366px) {
+      @media screen and (max-width: 1366px) {
         font-size: 26px;
+      }
+      @media screen and (max-width: 475px) {
+        font-size: 18px;
       }
     }
   }
@@ -239,10 +246,15 @@ header {
     margin-bottom: 24px;
     font-size: 40px;
 
-    @media (max-width: 1366px) {
+    @media screen and (max-width: 1366px) {
       font-size: 32px;
       margin-top: 16px;
       margin-bottom: 16px;
+    }
+    @media screen and (max-width: 475px) {
+      font-size: 20px;
+      margin-top: 8px;
+      margin-bottom: 8px;
     }
 
     &__prev, &__next {
@@ -252,6 +264,9 @@ header {
     &__line {
       height: 48px;
       background: #CECFDB;
+      -webkit-background-color: #CECFDB;
+      -moz-background-color: #CECFDB;
+      -ms-background-color: #CECFDB;
       width: 1px;
     }
   }
@@ -265,10 +280,10 @@ header {
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 1900px) {
+  @media screen and (max-width: 1900px) {
     right: 20px;
   }
-  @media (max-width: 1280px) {
+  @media screen and (max-width: 1280px) {
     position: relative;
     right: 0;
     top: 0;
@@ -280,10 +295,10 @@ header {
     margin-bottom: 40px;
     width: 80px;
 
-    @media (max-width: 1366px) {
+    @media screen and (max-width: 1366px) {
       width: 50px;
     }
-    @media (max-width: 1280px) {
+    @media screen and (max-width: 1280px) {
       margin-left: 20px;
     }
   }

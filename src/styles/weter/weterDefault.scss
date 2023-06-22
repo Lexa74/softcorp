@@ -2,31 +2,13 @@ a {
   color: #050A1B;
 }
 
-input[type='text'], input[type='email'], input[type='password'], input[type='number'], input[type='tel'] {
-  outline: none;
-  width: 100%;
-  border-radius: 3px;
-  border: 1px solid white;
-  padding: 12px 10px;
-  font-size: 18px;
-  line-height: 22px;
-  background: rgba(255, 255, 255, 0.85);
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-  }
-
-  &::placeholder {
-    color: #272733;
-  }
-}
-
 body {
   font-family: InterRegular;
   font-size: 16px;
   line-height: 48px;
   color: #CECFDB;
   background: black;
+  overflow-x: hidden;
 
   &.active {
     overflow-y: hidden;
@@ -41,18 +23,18 @@ h1, .h1 {
   font-size: 72px;
   line-height: 80px;
 
-  @media (max-width: 1900px) {
+  @media screen and (max-width: 1900px) {
     font-size: 55px;
   }
-  @media (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     font-size: 44px;
   }
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 32px;
     line-height: 48px;
   }
-  @media (max-width: 475px) {
-    font-size: 23px;
+  @media screen and (max-width: 475px) {
+    font-size: 32px;
     line-height: 30px;
   }
 }
@@ -62,17 +44,17 @@ h2 {
   line-height: 96px;
   font-family: InterRegular;
 
-  @media (max-width: 1900px) {
+  @media screen and (max-width: 1900px) {
     font-size: 70px;
   }
-  @media (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     font-size: 55px;
   }
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 28px;
   }
-  @media (max-width: 475px) {
-    font-size: 20px;
+  @media screen and (max-width: 475px) {
+    font-size: 24px;
     line-height: 32px;
   }
 }
@@ -84,7 +66,10 @@ h2 {
   padding: 0 72px;
   position: relative;
 
-  @media (max-width: 1900px) {
+  @media screen and (max-width: 1900px) {
     padding: 0 20px;
+  }
+  @media screen and (max-width: 475px) {
+    padding: 0 10px;
   }
 }
