@@ -1,0 +1,178 @@
+.technologies {
+  margin-bottom: 100px;
+
+  &__heading {
+    margin-top: 176px;
+    text-align: center;
+    margin-bottom: 96px;
+
+    @media screen and (max-width: 1280px) {
+      margin-top: 76px;
+      margin-bottom: 76px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+  }
+  &__swiper {
+    width: 516px;
+    margin: auto;
+
+    @media screen and (max-width: 475px) {
+      width: 276px;
+    }
+  }
+}
+
+.technologies-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 104px;
+
+  @media screen and (max-width: 1366px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (max-width: 475px) {
+    margin-bottom: 34px;
+  }
+
+  &__line {
+    background-image: url("/softcorp/src/images/line-techonology.png");
+    background-repeat: repeat;
+    height: 1px;
+    width: 43%;
+    position: absolute;
+    top: 450px;
+    left: 690px;
+    z-index: -1;
+
+    @media screen and (max-width: 1900px) {
+      left: 640px;
+    }
+    @media screen and (max-width: 1500px) {
+      left: 500px;
+    }
+    @media screen and (max-width: 1366px) {
+      left: 460px;
+      top: 400px;
+    }
+    @media screen and (max-width: 1280px) {
+      left: 361px;
+      top: 660px;
+      width: 300px;
+      transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.technology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__name {
+    font-size: 48px;
+    line-height: 56px;
+    font-family: InterSemiBold;
+
+    @media screen and (max-width: 1500px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 1280px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 475px) {
+      font-size: 18px;
+      text-align: center;
+      line-height: 32px;
+    }
+  }
+  &__image {
+    &_small {
+      width: 248px;
+      margin-bottom: 46px;
+
+      @media screen and (max-width: 1366px) {
+        width: 200px;
+      }
+      @media screen and (max-width: 1280px) {
+        margin-top: 50px;
+      }
+      @media screen and (max-width: 475px) {
+        width: 100px;
+      }
+    }
+    &_big {
+      width: 426px;
+      margin-bottom: 111px;
+
+      @media screen and (max-width: 1366px) {
+        width: 336px;
+      }
+      @media screen and (max-width: 475px) {
+        width: 186px;
+      }
+    }
+    &_big, &_small {
+      @media screen and (max-width: 1280px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    width: 576px;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 40px;
+      width: 320px;
+    }
+
+    img {
+      width: 240px;
+      margin: 0 auto 32px auto;
+
+      @media screen and (max-width: 768px) {
+        width: 180px;
+      }
+    }
+    span {
+      font-size: 40px;
+      line-height: 48px;
+
+      @media screen and (max-width: 1366px) {
+        font-size: 24px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}

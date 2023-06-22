@@ -1,46 +1,4 @@
-@font-face {
-  font-family: "LatoRegular";
-  src: url("../fonts/Lato-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "LatoMedium";
-  src: url("../fonts/Lato-Medium.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face{
-  font-family: "LatoSemiBold";
-  src: url("../fonts/Lato-Semibold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face{
-  font-family: "LatoBold";
-  src: url("../fonts/Lato-Bold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face{
-  font-family: "LatoLight";
-  src: url("../fonts/Lato-Light.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 a {
-  text-decoration: none;
   color: #050A1B;
 }
 
@@ -63,20 +21,11 @@ input[type='text'], input[type='email'], input[type='password'], input[type='num
   }
 }
 
-input:focus {
-  outline: none;
-}
-
 body {
   font-family: LatoRegular;
   color: #000000;
   font-size: 16px;
   line-height: 16px;
-}
-
-img {
-  width: 100%;
-  height: auto;
 }
 
 h1, h2, .h1, .h2 {
@@ -117,27 +66,6 @@ h2 {
   }
 }
 
-ul {
-  li {
-    list-style-type: none;
-    position: relative;
-  }
-  &.list {
-    li {
-      line-height: 25px;
-      padding-left: 25px;
-      margin-bottom: 5px;
-
-      &:after {
-        content: '-';
-        position: absolute;
-        top: 0;
-        left: 10px;
-      }
-    }
-  }
-}
-
 .wrapper {
   max-width: 1170px;
   position: relative;
@@ -145,22 +73,6 @@ ul {
 
   @media (max-width: 1170px) {
     padding: 0 20px;
-  }
-}
-
-.layout {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background: rgba(0, 0, 0, .8);
-  z-index: -1;
-  display: none;
-
-  &.active {
-    z-index: 3;
-    display: block;
   }
 }
 
