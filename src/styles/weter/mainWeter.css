@@ -837,7 +837,7 @@ header .burger rect {
 .technology__name {
   font-size: 48px;
   line-height: 56px;
-  font-family: InterSemiBold;
+  font-family: InterBold;
 }
 @media screen and (max-width: 1500px) {
   .technology__name {
