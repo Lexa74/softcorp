@@ -89,10 +89,19 @@ body {
   line-height: 48px;
   color: #CECFDB;
   background: black;
-  overflow-x: hidden;
-  width: 1920px;
   margin: 0 auto;
   position: relative;
+  width: 1920px;
+}
+@media (min-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 1920px) {
+  body {
+    width: 100%;
+  }
 }
 body.active {
   overflow-y: hidden;
@@ -114,10 +123,10 @@ h2 {
 }
 
 .wrapper {
-  width: 1920px;
-  margin: 0 auto;
   padding: 0 72px;
   position: relative;
+  width: 1920px;
+  margin: 0 auto;
 }
 
 header {
@@ -125,14 +134,18 @@ header {
   top: 0;
   left: 0;
   z-index: 2;
-  width: 1920px;
-  margin: 0 auto;
+}
+@media (min-width: 1920px) {
+  header {
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
 }
 
 .header-container {
   display: flex;
   justify-content: flex-end;
-  position: absolute;
 }
 
 .navigation-menu {
@@ -271,7 +284,7 @@ header {
 .socials {
   position: absolute;
   top: 150px;
-  right: 72px;
+  right: 0;
   display: flex;
   flex-direction: column;
 }

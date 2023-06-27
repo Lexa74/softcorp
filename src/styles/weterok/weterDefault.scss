@@ -8,10 +8,16 @@ body {
   line-height: 48px;
   color: #CECFDB;
   background: black;
-  overflow-x: hidden;
-  width: 1920px;
   margin: 0 auto;
   position: relative;
+  width: 1920px;
+
+  @media (min-width: 1024px) {
+    overflow-x: hidden;
+  }
+  @media (min-width: 1920px) {
+    width: 100%;
+  }
 
   &.active {
     overflow-y: hidden;
@@ -34,8 +40,8 @@ h2 {
 }
 
 .wrapper {
-  width: 1920px;
-  margin: 0 auto;
   padding: 0 72px;
   position: relative;
+  width: 1920px;
+  margin: 0 auto;
 }
