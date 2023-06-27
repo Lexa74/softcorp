@@ -1,0 +1,41 @@
+a {
+  color: #050A1B;
+}
+
+body {
+  font-family: InterRegular;
+  font-size: 16px;
+  line-height: 48px;
+  color: #CECFDB;
+  background: black;
+  overflow-x: hidden;
+  width: 1920px;
+  margin: 0 auto;
+  position: relative;
+
+  &.active {
+    overflow-y: hidden;
+  }
+}
+
+h1, h2, .h1, .h2 {
+  font-family: InterBold;
+}
+
+h1, .h1 {
+  font-size: 72px;
+  line-height: 80px;
+}
+
+h2 {
+  font-size: 88px;
+  line-height: 96px;
+  font-family: InterRegular;
+}
+
+.wrapper {
+  width: 1920px;
+  margin: 0 auto;
+  padding: 0 72px;
+  position: relative;
+}

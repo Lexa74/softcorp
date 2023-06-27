@@ -1,0 +1,39 @@
+header {
+  &.active {
+    .burger {
+      rect {
+        fill: #000;
+      }
+      .line_top {
+        transform: translate(8px, -1px) rotate(45deg);
+      }
+      .line_middle {
+        opacity: 0;
+      }
+      .line_bottom {
+        transform: translate(35px, 11px) rotate(135deg);
+      }
+    }
+    .wrapper-for-mobile {
+      right: -1px;
+    }
+  }
+
+  .burger {
+    display: none;
+    z-index: 9999;
+    top: 25px;
+    position: relative;
+    rect {
+      transition: .3s all;
+      opacity: 1;
+      fill: #fff;
+    }
+  }
+}
+
+.wrapper-for-mobile {
+  position: relative;
+  z-index: 6;
+  transition: .3s all;
+}
