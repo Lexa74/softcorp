@@ -1,0 +1,457 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+.layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+  display: none;
+}
+.layout.active {
+  z-index: 3;
+  display: block;
+}
+
+ul li {
+  list-style-type: none;
+  position: relative;
+}
+ul.list li {
+  line-height: 25px;
+  padding-left: 25px;
+  margin-bottom: 5px;
+}
+ul.list li:after {
+  content: "-";
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+@font-face {
+  font-family: "InterRegular";
+  src: url("../../../src/fonts/inter/Inter-Regular.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "InterMedium";
+  src: url("../../../src/fonts/inter/Inter-Medium.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "InterSemiBold";
+  src: url("../../../src/fonts/inter/Inter-Semibold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "InterBold";
+  src: url("../../../src/fonts/inter/Inter-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "InterLight";
+  src: url("../../../src/fonts/inter/Inter-Light.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+a {
+  color: #050A1B;
+}
+
+body {
+  font-family: InterRegular;
+  font-size: 16px;
+  line-height: 48px;
+  color: #CECFDB;
+  background: black;
+  overflow-x: hidden;
+  width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+body.active {
+  overflow-y: hidden;
+}
+
+h1, h2, .h1, .h2 {
+  font-family: InterBold;
+}
+
+h1, .h1 {
+  font-size: 72px;
+  line-height: 80px;
+}
+
+h2 {
+  font-size: 88px;
+  line-height: 96px;
+  font-family: InterRegular;
+}
+
+.wrapper {
+  width: 1920px;
+  margin: 0 auto;
+  padding: 0 72px;
+  position: relative;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+}
+
+.navigation-menu {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 94px;
+  padding-top: 24px;
+}
+.navigation-menu__link {
+  padding: 0 20px;
+  color: #CECFDB;
+}
+.navigation-menu__link:last-child {
+  padding-right: 0;
+}
+
+.navigation-menu__link, .language {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.language {
+  position: absolute;
+  right: 72px;
+  top: 24px;
+  color: #CECFDB;
+}
+
+.logo-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-block__logo {
+  display: block;
+  padding: 14px 0 11px 24px;
+  width: 217px;
+}
+.logo-block__logo .logo {
+  display: block;
+}
+.logo-block__news-mobile {
+  margin-right: 20px;
+  font-size: 34px;
+  display: none;
+  cursor: pointer;
+}
+.logo-block__news-mobile.active .arrow-rotate {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+.logo-block__news-mobile .arrow-rotate {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  display: inline-block;
+  margin-left: 5px;
+  transition: 0.3s all;
+}
+
+.logo-and-news {
+  border: 1px solid #CECFDB;
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  left: 72px;
+  color: #CECFDB;
+  z-index: 5;
+}
+
+.wrapper-news {
+  margin: 0 24px;
+}
+
+.news {
+  position: relative;
+  line-height: 48px;
+  width: 539px;
+  max-height: 1000px;
+  overflow: hidden;
+  transition: 0.5s all;
+}
+.news.active {
+  max-height: 1000px;
+}
+.news__date {
+  padding: 8px 12px;
+  font-size: 40px;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  background: rgba(0, 0, 2, 0.16);
+}
+.news__heading {
+  font-size: 48px;
+  line-height: 56px;
+  font-family: InterBold;
+  padding: 24px 0 132px 0;
+}
+.news .news-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #CECFDB;
+  padding-bottom: 24px;
+}
+.news .news-actions__view, .news .news-actions__likes {
+  display: flex;
+  font-size: 40px;
+}
+.news .news-actions__view span, .news .news-actions__likes span {
+  margin-left: 12px;
+}
+.news .news-actions__read-more {
+  font-size: 48px;
+  line-height: 56px;
+  font-family: InterBold;
+}
+.news .news-control {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 40px;
+}
+.news .news-control__prev, .news .news-control__next {
+  color: #CECFDB;
+}
+.news .news-control__line {
+  height: 48px;
+  background: #CECFDB;
+  -webkit-background-color: #CECFDB;
+  -moz-background-color: #CECFDB;
+  -ms-background-color: #CECFDB;
+  width: 1px;
+}
+
+.socials {
+  position: absolute;
+  top: 150px;
+  right: 72px;
+  display: flex;
+  flex-direction: column;
+}
+.socials__icon {
+  margin-bottom: 40px;
+  width: 80px;
+}
+
+.hero-page {
+  width: 100%;
+  position: relative;
+}
+
+.hero-container {
+  margin-left: 600px;
+  padding-top: 120px;
+  max-width: 850px;
+}
+.hero-container__caption {
+  margin-bottom: 16px;
+}
+.hero-container__sub-caption {
+  font-size: 56px;
+  line-height: 64px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #CECFDB;
+}
+.hero-container__description {
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 140px;
+  font-family: InterBold;
+}
+
+.video-presentation-container {
+  display: flex;
+}
+.video-presentation-container__icon {
+  margin-right: 24px;
+}
+.video-presentation-container p {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 48px;
+  line-height: 56px;
+  font-family: InterBold;
+}
+.video-presentation-container span {
+  font-size: 40px;
+}
+
+.bg-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.bg-images__image {
+  opacity: 0;
+  transition: 0.5s all;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.bg-images__image:first-child {
+  background-image: url("/softcorp/src/images/bg-weter-1.png");
+}
+.bg-images__image:last-child {
+  background-image: url("/softcorp/src/images/bg-weter-2.png");
+}
+.bg-images__image.active {
+  opacity: 1;
+}
+
+header.active .burger rect {
+  fill: #000;
+}
+header.active .burger .line_top {
+  transform: translate(8px, -1px) rotate(45deg);
+}
+header.active .burger .line_middle {
+  opacity: 0;
+}
+header.active .burger .line_bottom {
+  transform: translate(35px, 11px) rotate(135deg);
+}
+header.active .wrapper-for-mobile {
+  right: -1px;
+}
+header .burger {
+  display: none;
+  z-index: 9999;
+  top: 25px;
+  position: relative;
+}
+header .burger rect {
+  transition: 0.3s all;
+  opacity: 1;
+  fill: #fff;
+}
+
+.wrapper-for-mobile {
+  position: relative;
+  z-index: 6;
+  transition: 0.3s all;
+}
+
+.technologies {
+  margin-bottom: 100px;
+}
+.technologies__heading {
+  margin-top: 176px;
+  text-align: center;
+  margin-bottom: 96px;
+}
+.technologies__swiper {
+  width: 516px;
+  margin: auto;
+}
+
+.technologies-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 104px;
+}
+.technologies-container__line {
+  background-image: url("/softcorp/src/images/line-techonology.png");
+  background-repeat: repeat;
+  height: 1px;
+  width: 43%;
+  position: absolute;
+  top: 450px;
+  left: 690px;
+  z-index: -1;
+}
+
+.technology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.technology__name {
+  font-size: 48px;
+  line-height: 56px;
+  font-family: InterBold;
+}
+.technology__image_small {
+  width: 248px;
+  margin-bottom: 46px;
+}
+.technology__image_big {
+  width: 426px;
+  margin-bottom: 111px;
+}
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.advantages__section {
+  display: flex;
+  flex-direction: column;
+  width: 576px;
+  text-align: center;
+}
+.advantages__section img {
+  width: 240px;
+  margin: 0 auto 32px auto;
+}
+.advantages__section span {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+/*# sourceMappingURL=mainWeter.css.map */

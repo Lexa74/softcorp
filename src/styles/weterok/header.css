@@ -1,0 +1,32 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navigation-menu {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 94px;
+  padding-top: 24px;
+}
+.navigation-menu__link {
+  padding: 0 20px;
+  font-size: 40px;
+  line-height: 48px;
+  color: #CECFDB;
+}
+.navigation-menu__link:last-child {
+  padding-right: 0;
+}
+
+.language {
+  position: absolute;
+  right: 0;
+  top: 24px;
+  font-size: 40px;
+  line-height: 48px;
+  color: #CECFDB;
+}
+
+/*# sourceMappingURL=header.css.map */

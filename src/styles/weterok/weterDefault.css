@@ -1,0 +1,79 @@
+a {
+  color: #050A1B;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=number], input[type=tel] {
+  outline: none;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid white;
+  padding: 12px 10px;
+  font-size: 18px;
+  line-height: 22px;
+  background: rgba(255, 255, 255, 0.85);
+}
+@media (max-width: 768px) {
+  input[type=text], input[type=email], input[type=password], input[type=number], input[type=tel] {
+    font-size: 14px;
+  }
+}
+input[type=text]::placeholder, input[type=email]::placeholder, input[type=password]::placeholder, input[type=number]::placeholder, input[type=tel]::placeholder {
+  color: #272733;
+}
+
+body {
+  font-family: LatoRegular;
+  color: #000000;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+h1, h2, .h1, .h2 {
+  font-family: LatoBold;
+  text-transform: uppercase;
+}
+
+h1, .h1 {
+  font-size: 48px;
+  line-height: 58px;
+}
+@media (max-width: 1024px) {
+  h1, .h1 {
+    font-size: 44px;
+  }
+}
+@media (max-width: 768px) {
+  h1, .h1 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 475px) {
+  h1, .h1 {
+    font-size: 23px;
+    line-height: 30px;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 43px;
+}
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 475px) {
+  h2 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+/*# sourceMappingURL=weterDefault.css.map */
