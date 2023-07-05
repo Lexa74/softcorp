@@ -1,0 +1,96 @@
+.winners {
+  padding: 100px 0;
+  background-repeat: repeat;
+}
+.winners .heading {
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 3px solid #b3b3b6;
+  margin-bottom: 20px;
+}
+.winners .heading.hide:after {
+  transform: rotate(180deg);
+}
+.winners .heading:after {
+  content: "";
+  background: url(../../src/images/arr-select.svg);
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 10px;
+  background-size: 100%;
+  transform: rotate(0);
+  transition: 0.3s all;
+}
+.winners .tabs {
+  transition: 0.3s all;
+  overflow: hidden;
+}
+.winners .tabs.hide {
+  height: 0;
+}
+.winners .tabs .tab-labels {
+  display: flex;
+  justify-content: center;
+}
+.winners .tabs .tab-labels__label {
+  padding: 10px 20px;
+  background: #6F6D7B;
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 0.3s all;
+  text-align: center;
+}
+.winners .tabs .tab-labels__label.active {
+  background: #3E9CDC;
+}
+.winners .tabs .tab-elems__elem {
+  height: 0;
+  opacity: 0;
+  transition: opacity 0.3s, width 0.3s, transform 0.3s;
+  transform: translateX(200px);
+}
+.winners .tabs .tab-elems__elem.active {
+  height: auto;
+  opacity: 1;
+  width: 100%;
+  transform: translateX(0);
+}
+.winners .tabs .tabs-titles {
+  font-weight: bold;
+}
+.winners .tabs .tab-row, .winners .tabs .tabs-titles {
+  display: flex;
+  border-bottom: 1px solid #6F6D7B;
+}
+.winners .tabs .tab-row .email-winners, .winners .tabs .tab-row .prize, .winners .tabs .tab-row .tabs-titles__title, .winners .tabs .tabs-titles .email-winners, .winners .tabs .tabs-titles .prize, .winners .tabs .tabs-titles .tabs-titles__title {
+  width: 50%;
+  padding: 20px 10px;
+}
+@media (max-width: 991px) {
+  .winners .tabs.bg-image {
+    color: white;
+    background-image: url(../../src/images/pattern2.png);
+  }
+}
+@media (max-width: 767px) {
+  .winners .tabs.bg-image {
+    background-image: url(../../src/images/pattern3.png);
+  }
+}
+@media (max-width: 991px) {
+  .winners .tabs {
+    background-color: #dfdfdf;
+  }
+}
+@media (max-width: 767px) {
+  .winners .tabs {
+    color: white;
+    background-color: rgba(16, 16, 29, 0.9);
+  }
+}
+
+/*# sourceMappingURL=winners.css.map */
