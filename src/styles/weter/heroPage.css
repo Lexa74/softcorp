@@ -1,0 +1,89 @@
+.hero-page {
+  width: 100%;
+}
+
+.hero-container {
+  margin-left: 600px;
+  padding-top: 120px;
+  max-width: 850px;
+}
+.hero-container__caption {
+  margin-bottom: 16px;
+}
+.hero-container__sub-caption {
+  font-size: 56px;
+  line-height: 64px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #CECFDB;
+}
+.hero-container__description {
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 140px;
+  font-family: InterBold;
+}
+
+.video-presentation-container {
+  display: flex;
+}
+.video-presentation-container__icon {
+  margin-right: 24px;
+}
+.video-presentation-container p {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 48px;
+  line-height: 56px;
+  font-family: InterBold;
+}
+.video-presentation-container span {
+  font-size: 40px;
+}
+
+.bg-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.bg-images__image {
+  opacity: 0;
+  transition: 0.5s all;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.bg-images__image:first-child {
+  background-image: url("/softcorp/src/images/bg-weter-1.png");
+}
+.bg-images__image:last-child {
+  background-image: url("/softcorp/src/images/bg-weter-2.png");
+}
+.bg-images__image.active {
+  opacity: 1;
+}
+
+.socials {
+  position: absolute;
+  top: 150px;
+  right: 72px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1900px) {
+  .socials {
+    right: 20px;
+  }
+}
+.socials__icon {
+  margin-bottom: 40px;
+  width: 80px;
+}
+
+/*# sourceMappingURL=heroPage.css.map */

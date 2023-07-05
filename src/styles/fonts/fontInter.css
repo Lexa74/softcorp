@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "InterRegular";
+  src: url("../../../src/fonts/inter/Inter-Regular.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "InterMedium";
+  src: url("../../../src/fonts/inter/Inter-Medium.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "InterSemiBold";
+  src: url("../../../src/fonts/inter/Inter-Semibold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "InterBold";
+  src: url("../../../src/fonts/inter/Inter-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "InterLight";
+  src: url("../../../src/fonts/inter/Inter-Light.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*# sourceMappingURL=fontInter.css.map */
